@@ -1,5 +1,5 @@
     function contar(){
-        let ini=document.getElementById('n1')
+        let ini=document.agetElementById('n1')
         let fim=document.getElementById('n2')
         let passo=document.getElementById('pass')
         let res=document.getElementById('res')
