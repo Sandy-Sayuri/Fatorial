@@ -21,12 +21,14 @@ function contar(){
                 for(let c=i;c<=f;c+=p){
                  //contagem crecente
                  res.innerHTML+=`${c} \u{1F984}` 
-                 }
+                 }//o \u{aqui tem o código} é para pegar um Emoji 
+                 //peguei no site https://unicode.org/emoji/charts/full-emoji-list.html
              }
              else{
                  //Contagem regressiva
                  for(let c=i;c>=f;c-=p){
                 res.innerHTML+=`${c} \u{1F984}` 
+                
                  }
              }
            res.innerHTML+=`\u{1F5A4} `
