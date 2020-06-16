@@ -1,19 +1,34 @@
-    function contar(){
-        let ini=document.agetElementById('n1')
-        let fim=document.getElementById('n2')
-        let passo=document.getElementById('pass')
+function contar(){
+        let ini=document.getElementById('txti')
+        let fim=document.getElementById('txtf')
+        let passo=document.getElementById('txtp')
         let res=document.getElementById('res')
         if(ini.value.length==0||fim.value.length==0
          || passo.value.length==0 ){
-             alert('[ERRO] Faltam dados!')
+             res.innerHTML='Impossivel contar!'
+             //alert('[ERRO] Faltam dados!')
          }
          else{
-             res.innerHTML="Contando :"
+             res.innerHTML="Contando : <br>"
              let i =Number(ini.value)
              let f=Number(fim.value)
              let p=Number(passo.value)
-             for(let c=i;c<=f;c<=p){
-                 res.innerHTML+=`${c} `
+             if(p<=0){
+                 alert('Passo interválo')
+                 p=1
              }
+             if(i<f){
+                for(let c=i;c<=f;c+=p){
+                 //contagem crecente
+                 res.innerHTML+=`${c} \u{1F984}` 
+                 }
+             }
+             else{
+                 //Contagem regressiva
+                 for(let c=i;c>=f;c-=p){
+                res.innerHTML+=`${c} \u{1F984}` 
+                 }
+             }
+           res.innerHTML+=`\u{1F5A4} `
          }
     }
